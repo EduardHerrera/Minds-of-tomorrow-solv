@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    /* font family */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -8,26 +7,59 @@ body {
     margin: 0;
 }
 
-/ Clear floats after the columns / .row:after {
+.row:after {
     content: "";
     display: table;
     clear: both;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+/*Estilos que van a definir la barra de navegacion*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10% 0 10%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.4s;
+}
+
+li {
+    float: left;
+    width: 25%;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    color: white;
+  }
+
 .header {
-    background-image: url("../img/banner-2.jpg");
+    background-image: url('../img/banner-2.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding: 10% 20px;
     text-align: center;
+    color: black;
 }
 
 .header h1 {
     font-size: 100px;
 }
 
-
-/Clases de columnas*/
 
 .one-column {
     float: left;
@@ -36,43 +68,51 @@ body {
 }
 
 .one-column h1 {
-    font-size: 5vw;
+    font-size: 6vw;
     text-align: center;
+    font-weight: 0;
 }
 
 .two-column {
+    padding: 2%;
     float: left;
     width: 50%;
-    padding: 2%;
-}
-
-.two-column h1 {
-    font-size: 5vw;
-}
-
-.two-column p {
-    font-size: 3vw;
 }
 
 .two-column img {
     width: 100%;
 }
 
+.two-column h1 {
+    font-size: 5vw;
+    text-align: center;
+}
+
+.two-column p {
+    font-size: 3vw;
+}
+
 .four-column {
+    padding: 2%;
     float: left;
     width: 25%;
-    padding: 2%;
 }
 
 .four-column img {
     width: 100%;
 }
+
 .four-column p {
     text-align: center;
 }
 
+
 #section-2 {
-    background-color: #28ECA5;
+    background-color: #28eca5;
+}
+
+#section-5 {
+    background-color: #46a6fc;
 }
 
 #footer {
@@ -81,16 +121,12 @@ body {
 }
 
 #footer p {
-    font-size: 20px;
     text-align: left;
-}
-
-#section-5{
-    background-color: #46a6fc;
+    font-size: 20px;
 }
 
 .padding-0 {
-    padding: 0px;
+    padding: 0%;
 }
 
 @media screen and (max-width:700px) {
